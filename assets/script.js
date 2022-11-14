@@ -14,76 +14,60 @@ else{
 console.log(thour)
 
 
-
-function timeblockhour(timeblock){
+function timeblockhour(timeblock,id){
 
 if(thour != timeblock) {
-
     if(thour > timeblock && thour > 6 && timeblock >= 9){
-    console.log("before")
-
+    id.addClass('past');
 }
 
 else if(thour > timeblock && timeblock < 6 && thour < 6){
-console.log("before")
-
-
+id.addClass('past')
 }
 
 else if(thour < timeblock && timeblock > 8 && thour < 6){
-    console.log('before')
+    id.addClass('past')
 }
 
 else if(thour > timeblock && timeblock < 6 && thour > 8){
-    console.log('after')
+    id.addClass('future')
 }
 
 else if(thour < timeblock && timeblock < 6 && thour < 6){
-    console.log("after")
+    id.addClass('future')
 }
-
 
 else if(thour < timeblock && thour > 6 && timeblock >= 9){
-    console.log("after");
+    id.addClass('future')
 }
-
-
-else {
-    console.log("crf");
-}}
+}
 else if (thour = timeblock){
-    console.log("at time")
+
+    id.addClass('present')
 }
-
-
-
-
-}
-function colortimeblocks(color){
-    console.log(color)
 }
 
 
 
 
 var st1 = $("#9")
-timeblockhour(st1.attr("id"))
+timeblockhour(st1.attr("id"),st1)
 var st2 = $('#10')
-timeblockhour(st2.attr("id"))
+timeblockhour(st2.attr("id"),st2)
 var st3 = $('#11')
-timeblockhour(st3.attr("id"))
+timeblockhour(st3.attr("id"),st3)
 var st4 = $('#12')
-timeblockhour(st4.attr("id"))
+timeblockhour(st4.attr("id"),st4)
 var st5 = $('#1')
-timeblockhour(st5.attr("id"))
+timeblockhour(st5.attr("id"),st5)
 var st6 = $('#2')
-timeblockhour(st6.attr("id"))
+timeblockhour(st6.attr("id"),st6)
 var st7 = $('#3')
-timeblockhour(st7.attr("id"))
+timeblockhour(st7.attr("id"),st7)
 var st8 = $('#4')
-timeblockhour(st8.attr("id"))
+timeblockhour(st8.attr("id"),st8)
 var st9 = $("#5")
-timeblockhour(st9.attr("id"))
+timeblockhour(st9.attr("id"),st9)
 
 
 
