@@ -4,20 +4,99 @@ var today = moment();
 $("#currentDay").text(today.format('MMM Do, YYYY'));
 
 // creating timeblocks
+var hour = moment().hour()
+if(hour > 12){
+    var thour = hour-12;
+}
+else{
+    var thour = hour;
+}
+console.log(thour)
 
 
 
+function timeblockhour(timeblock){
 
+if(thour != timeblock) {
 
-function comparetime(t1,t2){
-    if(t1.isBefore(t2)) {
-        console.log("hey")
-    }
-    else {
-        console.log("bye bye")
-    }
+    if(thour > timeblock && thour > 6 && timeblock >= 9){
+    console.log("before")
 
 }
+
+else if(thour > timeblock && timeblock < 6 && thour < 6){
+console.log("before")
+
+
+}
+
+else if(thour < timeblock && timeblock > 8 && thour < 6){
+    console.log('before')
+}
+
+else if(thour > timeblock && timeblock < 6 && thour > 8){
+    console.log('after')
+}
+
+else if(thour < timeblock && timeblock < 6 && thour < 6){
+    console.log("after")
+}
+
+
+else if(thour < timeblock && thour > 6 && timeblock >= 9){
+    console.log("after");
+}
+
+
+else {
+    console.log("crf");
+}}
+else if (thour = timeblock){
+    console.log("at time")
+}
+
+
+
+
+}
+function colortimeblocks(color){
+    console.log(color)
+}
+
+
+
+
+var st1 = $("#9")
+timeblockhour(st1.attr("id"))
+var st2 = $('#10')
+timeblockhour(st2.attr("id"))
+var st3 = $('#11')
+timeblockhour(st3.attr("id"))
+var st4 = $('#12')
+timeblockhour(st4.attr("id"))
+var st5 = $('#1')
+timeblockhour(st5.attr("id"))
+var st6 = $('#2')
+timeblockhour(st6.attr("id"))
+var st7 = $('#3')
+timeblockhour(st7.attr("id"))
+var st8 = $('#4')
+timeblockhour(st8.attr("id"))
+var st9 = $("#5")
+timeblockhour(st9.attr("id"))
+
+
+
+
+
+
+// var st3 = $('#11')
+// timeblockhour(st3)
+// var st4 = $('#12')
+// timeblockhour(st4)
+// var st5 = $('#1')
+// timeblockhour(st5)
+
 // tried to create and append time blocks
 // tried to append text and create the time blocks
 // console.log(startTime.format("LLL"));
