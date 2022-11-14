@@ -4,29 +4,20 @@ var today = moment();
 $("#currentDay").text(today.format('MMM Do, YYYY'));
 
 // creating timeblocks
-var sT = moment("9:00 am", "hh:mm a");
-$('#9am').text(sT.format("LT"));
-sT.add(1,"hours")
-$('#10am').text(sT.format("LT"));
-sT.add(1,"hours")
-$('#11am').text(sT.format("LT"));
-sT.add(1,"hours")
-$('#12pm').text(sT.format("LT"));
-sT.add(1,"hours")
-$('#1pm').text(sT.format("LT"));
-sT.add(1,"hours")
-$('#2pm').text(sT.format("LT"));
-sT.add(1,"hours")
-$('#3pm').text(sT.format("LT"));
-sT.add(1,"hours")
-$('#4pm').text(sT.format("LT"));
-sT.add(1,"hours")
-$('#5pm').text(sT.format("LT"));
 
 
 
 
 
+function comparetime(t1,t2){
+    if(t1.isBefore(t2)) {
+        console.log("hey")
+    }
+    else {
+        console.log("bye bye")
+    }
+
+}
 // tried to create and append time blocks
 // tried to append text and create the time blocks
 // console.log(startTime.format("LLL"));
