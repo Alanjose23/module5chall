@@ -1,9 +1,30 @@
-// setting the current date of the formatting
+// setting the current date of the note
 var today = moment();
 
 $("#currentDay").text(today.format('MMM Do, YYYY'));
 
+// local storage configuration and get method
+// get item id and get value to be on the description card
+$("#9a .description").val(localStorage.getItem("9a"))
+$("#10a .description").val(localStorage.getItem("10a"))
+$("#11a .description").val(localStorage.getItem("11a"))
+$("#12p .description").val(localStorage.getItem("12p"))
+$("#1p .description").val(localStorage.getItem("1p"))
+$("#2p .description").val(localStorage.getItem("2p"))
+$("#3p .description").val(localStorage.getIten("3p"))
+$("#4p .description").val(localStorage.getItem("4p"))
+$("#5p .description").val(localStorage.getItem("5p"))
+
+// event listener for the logic of the save button
+// event click for the save button
+$(".saveBtn").on('click', function (){
+    var idval = $(this).parent().attr('id')
+    var note = $(this).siblings(".description").val()
+    localStorage.setItem(idval,note);
+    })
+
 // creating timeblocks
+// logic for time and moment.js configuration
 var hour = moment().hour()
 if(hour > 12){
     var thour = hour-12;
@@ -14,6 +35,9 @@ else{
 console.log(thour)
 
 
+
+// color and time block setter
+// adding classes to get appropriate response
 function timeblockhour(timeblock,id){
 
 if(thour != timeblock) {
